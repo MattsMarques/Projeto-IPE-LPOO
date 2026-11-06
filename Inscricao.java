@@ -1,4 +1,4 @@
-public class Incricao{
+public class Inscricao{
     private Estudante estudante;
     private Oportunidade oportunidade;
     private String situacao = "pendente";
