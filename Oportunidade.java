@@ -42,7 +42,7 @@ public class Oportunidade {
         this.aberta = false;
     }
 
-    public void inscrever(estudante){
+    public void inscrever(Estudante estudante){
         if (aberta == true){
 
         }
