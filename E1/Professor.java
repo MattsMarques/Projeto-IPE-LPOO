@@ -1,3 +1,4 @@
+package E1;
 public class Professor extends Usuario{
     private String siape;
     private String titulacao;
@@ -17,8 +18,10 @@ public class Professor extends Usuario{
 
     @Override 
     public String toString(){
-        return "Siape: " + this.siape + "\n"+
-        "Situlacao: " + this.titulacao;
+        return "Professor{"+
+            "Siape: " + this.siape + "\n"+
+            "Situlacao: " + this.titulacao+
+        "}";
     }
 
 }    

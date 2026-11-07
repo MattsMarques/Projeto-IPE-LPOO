@@ -1,3 +1,4 @@
+package E1;
 public class Inscricao{
     private Estudante estudante;
     private Oportunidade oportunidade;
@@ -30,5 +31,14 @@ public class Inscricao{
 
     public void desclassificar(){
         this.situacao = "desclassificado";
+    }
+
+    @Override
+    public String toString(){
+        return "Inscricao{" + 
+            "\n" + "Estudante: " + this.estudante.getNome() +
+            "\n" + "Oportunidade: " + this.oportunidade.getTitulo() +
+            "\n" + "Situação: " + this.situacao+
+        "\n" + "}";
     }
 }

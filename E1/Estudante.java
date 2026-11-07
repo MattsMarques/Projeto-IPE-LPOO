@@ -1,3 +1,4 @@
+package E1;
 public class Estudante extends Usuario{
     private String matricula;
     private String curso;
@@ -17,7 +18,9 @@ public class Estudante extends Usuario{
 
     @Override 
     public String toString(){
-        return "Matrícula: " + this.matricula + "\n"+
-        "Curso: " + this.curso;
+        return "Estudante{" +
+            "Matrícula: " + this.matricula + "\n"+
+            "Curso: " + this.curso+
+        "}";
     }
 }

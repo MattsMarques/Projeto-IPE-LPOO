@@ -1,3 +1,4 @@
+package E1;
 public class Oportunidade {
     
     private String titulo;
@@ -7,14 +8,12 @@ public class Oportunidade {
     private Professor responsavel;
 
 
-    public Oportunidade(String titulo, int vagas, int classificados, boolean aberta, Professor responsavel) {
+    public Oportunidade(String titulo, int vagas, Professor responsavel) {
         if (vagas < 1){
             this.vagas = 1;
         }
         this.titulo = titulo;
         this.vagas = vagas;
-        this.classificados = classificados;
-        this.aberta = aberta;
         this.responsavel = responsavel;
     }
 
@@ -42,18 +41,22 @@ public class Oportunidade {
         this.aberta = false;
     }
 
-    public void inscrever(Estudante estudante){
+    public Inscricao inscrever(Estudante estudante){
         if (aberta == true){
             System.out.println("Estudante Inscrito");
+            Oportunidade p = new Oportunidade(this.titulo, this.vagas, this.responsavel);
+            this.vagas--;
+            return new Inscricao(estudante, p);
         }
-
+        return null;
     }
-
-    public void registrarClassificacao(){
-        if (classificados < vagas ){
-            System.out.println("Número de vagas invalidas");
+    
+    public boolean registrarClassificacao(){
+        if (this.classificados < this.vagas ){
+            this.classificados++;
+            return true;
         }
-        classificados+=1;
+        return false;
     }
 
     @Override 
