@@ -44,14 +44,26 @@ public class Oportunidade {
 
     public void inscrever(Estudante estudante){
         if (aberta == true){
-
+            System.out.println("Estudante Inscrito");
         }
 
     }
 
     public void registrarClassificacao(){
         if (classificados < vagas ){
-            
+            System.out.println("Número de vagas invalidas");
         }
+        classificados+=1;
+    }
+
+    @Override 
+    public String toString() {
+        return "Oportunidade{" +
+                "titulo='" + this.titulo + '\'' +
+                ", vagas='" + this.vagas + '\'' +
+                ", classificados='" + this.classificados + '\'' +
+                ", aberta='" + this.aberta + '\'' +
+                ", responsavel='" + this.responsavel.getNome() + '\'' +
+                '}';
     }
 }
