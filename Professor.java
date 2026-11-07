@@ -14,4 +14,11 @@ public class Professor extends Usuario{
     public String getTitulacao(){
         return this.titulacao;
     }
+
+    @Override 
+    public String toString(){
+        return "Siape: " + this.siape + "\n"+
+        "Situlacao: " + this.titulacao;
+    }
+
 }    

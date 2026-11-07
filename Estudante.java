@@ -14,4 +14,10 @@ public class Estudante extends Usuario{
     public String getCurso(){
         return this.curso;
     }
+
+    @Override 
+    public String toString(){
+        return "Matrícula: " + this.matricula + "\n"+
+        "Curso: " + this.curso;
+    }
 }
