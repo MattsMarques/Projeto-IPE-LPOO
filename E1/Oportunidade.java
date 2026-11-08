@@ -9,11 +9,8 @@ public class Oportunidade {
 
 
     public Oportunidade(String titulo, int vagas, Professor responsavel) {
-        if (vagas < 1){
-            this.vagas = 1;
-        }
         this.titulo = titulo;
-        this.vagas = vagas;
+        this.vagas = (vagas < 1) ? 1 : vagas;
         this.responsavel = responsavel;
     }
 
@@ -42,17 +39,15 @@ public class Oportunidade {
     }
 
     public Inscricao inscrever(Estudante estudante){
-        if (aberta == true){
-            System.out.println("Estudante Inscrito");
-            Oportunidade p = new Oportunidade(this.titulo, this.vagas, this.responsavel);
-            this.vagas--;
-            return new Inscricao(estudante, p);
+        if (this.aberta){
+            return new Inscricao(estudante, this);
         }
         return null;
     }
     
     public boolean registrarClassificacao(){
         if (this.classificados < this.vagas ){
+            this.vagas--;
             this.classificados++;
             return true;
         }

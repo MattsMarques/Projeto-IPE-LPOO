@@ -18,10 +18,7 @@ public class Professor extends Usuario{
 
     @Override 
     public String toString(){
-        return "Professor{"+
-            "Siape: " + this.siape + "\n"+
-            "Situlacao: " + this.titulacao+
-        "}";
+        return "Professor{nome='" + getNome() + "', siape='" + siape + "', titulacao='" + titulacao + "'}";
     }
 
 }    

@@ -22,7 +22,7 @@ public class Inscricao{
     }
 
     public boolean classificar(){
-        if (this.oportunidade.getVagas() > 0){
+        if (this.oportunidade.registrarClassificacao()){
             this.situacao = "classificado";
             return true;
         }
